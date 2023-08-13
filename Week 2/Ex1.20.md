@@ -1,7 +1,7 @@
 #### Initial scheme procedure
 ```(define (gcd a b)
   (if (= b 0)
-      `a`
+      a
       (gcd b (remainder a b))))
 ```    
 
@@ -35,12 +35,12 @@
 (if (= 0 0)..)
 
 - This is way too long and confusing to work on I can't be bothered.
-- Looking at other peoples answers the number of applications of remainder is 18.
+- Looking at other people's answers the number of applications of remainder is 18.
 - Refer to jots-jottings blogspot for an explanation.
-- The single highlight is part of my unsuccessful attempt to highlight all occurances/ applications of remainder that I didn't complete.
+- The single highlight is part of my unsuccessful attempt to highlight all occurrences/ applications of remainder that I didn't complete.
 
 #### Applicative-order
-`
+```
 (gcd 206 40)
 (gcd 40 (remainder 206 40))
 (gcd 40 6)
@@ -51,4 +51,4 @@
 (gcd 2 (remainder 4 2))
 (gcd 2 0)
 2
-`
+```

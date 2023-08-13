@@ -5,7 +5,7 @@
       (gcd b (remainder a b))))
 ```    
 
-#### Normal order
+### Normal order
 
 (gcd 206 40)
 
@@ -34,12 +34,14 @@
 
 (if (= 0 0)..)
 
+
 - This is way too long and confusing to work on I can't be bothered.
 - Looking at other people's answers the number of applications of remainder is 18.
 - Refer to jots-jottings blogspot for an explanation.
 - The single highlight is part of my unsuccessful attempt to highlight all occurrences/ applications of remainder that I didn't complete.
 
-#### Applicative-order
+
+### Applicative-order
 ```
 (gcd 206 40)
 (gcd 40 (remainder 206 40))

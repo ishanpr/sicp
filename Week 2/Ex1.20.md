@@ -1,4 +1,4 @@
-#### Initial scheme procedure
+### Initial scheme procedure
 ```(define (gcd a b)
   (if (= b 0)
       a

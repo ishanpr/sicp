@@ -1,5 +1,5 @@
 #lang scheme
-;This is a test to determine the primality of a number n.
+;This is a test to determine the primality of a number n. Section 1.2.6
 
 (define (prime? n)
   (= n (smallest-divisor n)))

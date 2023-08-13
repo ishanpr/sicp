@@ -5,7 +5,7 @@
       (gcd b (remainder a b))))
 
 ; Normal order
-
+```
 (gcd 206 40)
 (if (= 40 0)206)..)
 (gcd 40 (remainder 206 40))
@@ -20,7 +20,7 @@
 (gcd (remainder (remainder 206 40) (remainder 40 (remainder 206 40))) (remainder (remainder 40 (remainder 206 40)) (remainder (remainder 206 40) (remainder 40 (remainder 206 40)))))
 (if (= (remainder (remainder 40 (remainder 206 40)) (remainder (remainder 206 40) (remainder 40 (remainder 206 40)))) 0)..)
 (if (= 0 0)..)
-
+```
 ; Applicative-order
 
 (gcd 206 40)

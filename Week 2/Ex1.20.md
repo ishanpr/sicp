@@ -1,7 +1,7 @@
 #### Initial scheme procedure
 ```(define (gcd a b)
   (if (= b 0)
-      a
+      `a`
       (gcd b (remainder a b))))
 ```    
 

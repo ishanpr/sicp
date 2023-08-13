@@ -1,4 +1,4 @@
-### Initial scheme procedure
+### Initial Scheme procedure
 ```(define (gcd a b)
   (if (= b 0)
       a
@@ -9,34 +9,36 @@
 
 (gcd 206 40)
 
-(if (= 40 0)206)..)
+(if (= 40 0)206)...)
 
-(gcd 40 (remainder 206 40))\
-(if (= `(remainder 206 40)` 0)..)
+(gcd 40 (remainder 206 40))
 
-(if (= 6 0)..)
+(if (= `(remainder 206 40)` 0)...)
+
+(if (= 6 0)...)
 
 (gcd (remainder 206 40) (remainder 40 (remainder 206 40)))
 
-(if (= (remainder 40 (remainder 206 40)) 0)..)
+(if (= (remainder 40 (remainder 206 40)) 0)...)
 
-(if (= 4 0)..)
+(if (= 4 0)...)
 
 (gcd (remainder 40 (remainder 206 40)) (remainder (remainder 206 40) (remainder 40 (remainder 206 40))))
 
-(if (= (remainder (remainder 206 40) (remainder 40 (remainder 206 40))) 0)..)
+(if (= (remainder (remainder 206 40) (remainder 40 (remainder 206 40))) 0)...)
 
-(if (= 2 0)..)
+(if (= 2 0)...)
 
 (gcd (remainder (remainder 206 40) (remainder 40 (remainder 206 40))) (remainder (remainder 40 (remainder 206 40)) (remainder (remainder 206 40) (remainder 40 (remainder 206 40)))))
 
-(if (= (remainder (remainder 40 (remainder 206 40)) (remainder (remainder 206 40) (remainder 40 (remainder 206 40)))) 0)..)
+(if (= (remainder (remainder 40 (remainder 206 40)) (remainder (remainder 206 40) (remainder 40 (remainder 206 40)))) 0)...)
 
-(if (= 0 0)..)
+(if (= 0 0)...)
 
+<br>
 
 - This is way too long and confusing to work on I can't be bothered.
-- Looking at other people's answers the number of applications of remainder is 18.
+- Looking at other people's answers the `number of applications of the remainder operation is 18`.
 - Refer to jots-jottings blogspot for an explanation.
 - The single highlight is part of my unsuccessful attempt to highlight all occurrences/ applications of remainder that I didn't complete.
 
@@ -54,3 +56,4 @@
 (gcd 2 0)
 2
 ```
+- Here you can clearly see that the applicative order evaluation requires much fewer steps.

@@ -2,6 +2,12 @@
 (define (next n)
   (if (even? n) (+ n 1) (+ n 2)))
 
+; The above implementation of next is what the program was executed on and the results are for that.
+;The following is a different implementation used in jots-jottings that is around the same speed or marginally slower.
+;(define (next n)
+;  (if (= n 2) 3 (+ n 2)))
+
+
 (define (smallest-divisor n) (find-divisor n 2))
 (define (find-divisor n test-divisor)
   (cond ((> (square test-divisor) n) n)
@@ -32,6 +38,8 @@
     (cond ((<= n upper) (timed-prime-test n) (iter (+ n 2)))))
   (iter (if (odd? lower) lower (+ lower 1))))
 
+
+
 (search-for-primes 14 28)
 (newline)
 (search-for-primes 1000 1020)
@@ -46,7 +54,7 @@
 (newline)
 (search-for-primes 1000000000000000000 1000000000000000040)
 
-;The outputs are as follows.
+; The outputs are as follows.
 15
 17 *** 0.001220703125
 19 *** 0.00146484375
@@ -195,3 +203,8 @@
 1000000000000000035
 1000000000000000037
 1000000000000000039
+
+; Compared to Exercise 1.22, the above modified version runs not quite 2x faster but is around 1.4x faster..
+; The reasons for this not quite being 2x faster could be because we replaced a primitive operation + with a user defined one.
+; Primitive operations have built in optimizations to make it faster.
+; Also when evaluating next the arguements are passed through the if operator to determine to evaluate the consequent or alternative, which adds complexity. 

@@ -70,7 +70,9 @@
 
 
 ; The problem with this procedure is that computers are way too fast now to see any real difference in elapsed time.
-; To make it more noticable one thing that could be done is to increase complexity of the function, the other is to just input larger numbers.
+; To make it more noticeable one thing that could be done is to increase complexity of the function, the other is to just input larger numbers.
+; Look up jots-jottings blogspot for an example of a complexified option
+
 (search-for-primes 10000000000000000 10000000000000080) ; The number had to be atleast this large to see any noticable delay on my device.
 (newline)
 (search-for-primes 1000000000000000000 1000000000000000040)
@@ -225,6 +227,13 @@
 1000000000000000035
 1000000000000000037
 1000000000000000039
+
+; With the results of the two larger number ranges you can see that the larger prime takes √100 times longer to process than the second largest prime.
+; That is 7080 vs 73730 (7080 * √100 = 70800)
+
+; Therefore we can conclude that the timing data does support the Θ(√n) order of growth in the number of steps and the result is compatible with the notion that programs on my computer run in time proportional to the number of steps required for the compution. 
+
+
 
 ;Ignore all this, I tried to make the function from scratch without realizing its provided.
 ;(define (smallest-divisor n) (find-divisor n 2))

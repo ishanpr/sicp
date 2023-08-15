@@ -24,8 +24,10 @@
 ;(fast-prime? 5477 453)
 ;(fast-prime? 15 7)
 
-; Using fast-expt here is functional but the issue here is that the process takes too long and uses too much compute. Computer froze running a 4 digit value lmao
+; While both procedures utilize exponentiation and squaring, fast-expt calculates pure exponentiation, and expmod calculates exponentiation modulo a given value 'm'.
 
-; " once the numbers exceed a certain value (230 on my interpreter) the interpreter needs to use a different representation that can handle larger values.
+; Using fast-expt here works but the issue is that the process takes too long and uses too much compute. (My computer froze running a 4 digit value lmao)
+
+; "Once the numbers exceed a certain value (2^30 on my interpreter) the interpreter needs to use a different representation that can handle larger values.
 ; And when it does this, the performance of the calculations degrades. In this case we're raising numbers to powers over 1,000, 10,000, etc, and so we'll quickly reach the point where this change occurs."
 ; - jots-jottings

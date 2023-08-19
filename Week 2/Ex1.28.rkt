@@ -1,5 +1,5 @@
 #lang scheme
-
+; THIS IS ACTUALLY INCOMPLETE - DO IT AGAIN
 
 ; The nontrivial square root of a number `a` is a value `x` such that the square of `x` is equal to `a` and `x` is not equal to the positive or negative square root of `a`.
 ; For example consider a real number, a = 9. Then the square roots of `a` are 3 and -3, both of them which are trivial square roots because their squares are equal to `a`. (3^2 = 9 and (-3)^2 = 9) 

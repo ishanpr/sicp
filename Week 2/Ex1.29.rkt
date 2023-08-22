@@ -5,8 +5,36 @@
         (+ (term a)
            (sum term (next a) next b))))
 (define (cube x) (* x x x))
-
+(define (next x) (+ x 1))
 (define (simpsons f a b n)
+  (define h (/ (- b a) n))
+  (define (kth-multiple k)
+  (cond ((or (= k 0) (= k n)) 1)
+        ((even? k) 2)
+        (else 4)))
+  (define (y k)
+    (f (+ a(* k h))))
+  (define (kth-term k)
+    (* (kth-multiple k) (y k)))
+  (* (sum kth-term 0 next n)
+     (/ h 3)))
+
+(simpsons cube 0 1 100)
+(simpsons cube 0 1 1000)
+
+;The procedure can be simplified as follows, according to jots jottings.
+(define (simpsons-rule f a b n)
+  (define h (/ (- b a) n))
+  (define (kth-term k)
+     (* (f (+ a (* k h)))
+        (cond ((or (= k 0) (= k n)) 1.0)
+              ((even? k) 2.0)
+              (else 4.0))))
+  (* (sum kth-term 0 inc n)
+     (/ h 3.0)))
+
+;Or it can be represented as follows;
+(define (simpsons-rule f a b n)
 (define h (/ (- b a) n))
   (define (y k)
     (cond ((or (= k 0) (= k n)) 1)
@@ -16,6 +44,3 @@
   (define (next k) (+ k 1))
     (* (sum term a next n)
        (/ h 3)))
-
-(simpsons cube 0 1 100)
-(simpsons cube 0 1 1000)

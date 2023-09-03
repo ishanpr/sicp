@@ -2,6 +2,5 @@
 
 ; We get an error.
 
-; *: contract violation
-  expected: number?
-  given: #<procedure:f>
+; *: contract violation - expected: number?
+; given: #<procedure:f>

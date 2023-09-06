@@ -11,7 +11,7 @@
           (cond ((positive? test-value)
                  (search f neg-point midpoint))
                 ((negative? test-value)
-(search f midpoint pos-point))
+                 (search f midpoint pos-point))
                 (else midpoint))))))
 
 ; You need to know the half-interval method (bisection method) of finding roots to understand this. Look it up on YT.

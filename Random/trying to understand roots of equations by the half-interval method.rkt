@@ -1,6 +1,7 @@
 #lang scheme
 (define (average x y) (/ (+ x y) 2))
 (define (close-enough? x y) (< (abs (- x y)) 0.001))
+; the close enough function checks if the absolute difference between the two end points is less than 0.001
 
 (define (search f neg-point pos-point)
   (let ((midpoint (average neg-point pos-point)))
@@ -27,4 +28,3 @@
 ; If test-value is negative it means that the root must be somewhere in the right subinterval [midpoint, pos-point]
 ; If test-value is neither positive nor negative (i.e., it's zero or some non-numeric value), it's assumed to be very close to the root, and midpoint is returned as the approximate root.
  
-; 

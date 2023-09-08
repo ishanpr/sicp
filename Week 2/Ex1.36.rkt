@@ -26,8 +26,10 @@
 (define (average x y)(/ (+ x y) 2))
 (fixed-point (lambda (x) (average x (/ (log 1000) (log x)))) 10)
 
+; Log 10 here as log 1 is 0, log 1.1 was used in jots jottings.
 
-;Outputs
+
+; Outputs
 first-guess: 10
 next: 2.9999999999999996
 next: 6.2877098228681545

@@ -19,3 +19,5 @@
         0
         (/ (n i) (+ (d i) (recur (- i 1))))))
   (recur k))
+
+; You could also initialize with 1 and go up by using (+ i 1) instead.
